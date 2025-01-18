@@ -1,0 +1,47 @@
+[
+    {
+      "name": "John Doe",
+      "dob": "1990-01-01",
+      "timeofbirth": "14:30",
+      "rashi": "Leo",
+      "gender": "Male",
+      "location": "New York, USA",
+      "vectorize": "John Doe is a male born on 1990-01-01 at 14:30 in New York, USA."
+    },
+    {
+      "name": "Jane Smith",
+      "dob": "1985-05-15",
+      "timeofbirth": "08:45",
+      "rashi": "Scorpio",
+      "gender": "Female",
+      "location": "Los Angeles, USA",
+      "vectorize": "Jane Smith is a female born on 1985-05-15 at 08:45 in Los Angeles, USA."
+    },
+    {
+      "name": "Alice Johnson",
+      "dob": "1995-12-25",
+      "timeofbirth": "20:15",
+      "rashi": "Capricorn",
+      "gender": "Female",
+      "location": "Chicago, USA",
+      "vectorize": "Alice Johnson is a female born on 1995-12-25 at 20:15 in Chicago, USA."
+    },
+    {
+      "name": "Bob Brown",
+      "dob": "1980-07-10",
+      "timeofbirth": "12:00",
+      "rashi": "Cancer",
+      "gender": "Male",
+      "location": "Houston, USA",
+      "vectorize": "Bob Brown is a male born on 1980-07-10 at 12:00 in Houston, USA."
+    },
+    {
+      "name": "Charlie Davis",
+      "dob": "1992-03-20",
+      "timeofbirth": "18:30",
+      "rashi": "Pisces",
+      "gender": "Other",
+      "location": "Miami, USA",
+      "vectorize": "Charlie Davis is a person born on 1992-03-20 at 18:30 in Miami, USA."
+    }
+  ]
