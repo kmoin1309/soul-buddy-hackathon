@@ -52,14 +52,14 @@ export default function Home() {
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 font-semibold justify-center items-center text-center ">
           {[
-            { service: "Rashi", path: "/rashi" },
-            { service: "Gemstone", path: "/gemstone" },
-            { service: "Ritual Guides", path: "/ritual-guide" },
-            { service: "Yoga", path: "/yoga" },
-            { service: "Advice", path: "/advice" },
-            { service: "Palm Reading", path: "/palm-reading" },
-            { service: "Horoscopes", path: "/horoscopes" },
-            { service: "Guided Meditation", path: "/meditate" },
+            { service: "Zodiac Predictions", path: "/rashi" },
+            { service: "Gemstone Recommendations", path: "/gemstone" },
+            { service: "Spiritual Rituals", path: "/ritual-guide" },
+            { service: "Yoga & Wellness", path: "/yoga" },
+            { service: "Personalized Guidance", path: "/advice" },
+            { service: "Palmistry Insights", path: "/palm-reading" },
+            { service: "Astrological Insights", path: "/horoscopes" },
+            { service: "Meditation & Mindfulness", path: "/meditate" },
           ].map(({ service, path }, index) => (
             <div key={index} className="flex flex-col items-center space-y-4">
               <Link href={path}>

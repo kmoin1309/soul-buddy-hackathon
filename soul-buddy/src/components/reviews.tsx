@@ -6,20 +6,20 @@ export default function Reviews() {
   const testimonials = [
     {
       text: "On the other hand, we denounce The righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded.",
-      author: "Gwynn Cadogan",
-      role: "Designer",
+      author: "Aries Dmello",
+      role: "SDE",
       image: aries // Use the imported image directly
     },
     {
       text: "On the other hand, we denounce The righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded.",
-      author: "Musinom Shion",
+      author: "Quazi Moin",
       role: "Developer",
       image: aries // Use the imported image directly
     },
     {
       text: "On the other hand, we denounce The righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded.",
-      author: "Tony Roy",
-      role: "SEO",
+      author: "Sujit Mishra",
+      role: "Engineer",
       image: aries // Use the imported image directly
     }
   ]
@@ -28,9 +28,9 @@ export default function Reviews() {
     <div className="bg-[#FAFAFA] py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-medium font-serif mb-6">Our Client Say's</h2>
+          <h2 className="text-4xl font-medium font-serif mb-6">Our Client Says</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function Reviews() {
                 <p className="text-muted-foreground mb-6">{testimonial.text}</p>
                 <div className="flex items-center gap-3">
                   <Avatar>
-                    <AvatarImage src={testimonial.image} alt={testimonial.author} /> {/* Correctly use the imported image */}
+                    <AvatarImage src="aries" alt={testimonial.author} /> {/* Correctly use the imported image */}
                     <AvatarFallback>{testimonial.author[0]}</AvatarFallback>
                   </Avatar>
                   <div>
