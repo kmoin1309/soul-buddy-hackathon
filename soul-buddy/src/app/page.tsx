@@ -79,9 +79,6 @@ export default function Home() {
       <Hand></Hand>
 
       <div className="bg-black p-8">
-        <h1 className="font-bold font-soria text-goldnew text-5xl text-center md:text-6xl mb-12">
-          Services We Offer
-        </h1>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 justify-center items-center text-center font-bold">
           {[
             { service: "Privacy Guaranteed", path: "/" },
