@@ -17,12 +17,12 @@ const HoroscopePage = () => {
     longitude: '78.4666',
     timezone: '5.5'
   });
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
-  const getZodiacSign = (sunSign) => {
-    const signs = {
+  const getZodiacSign = (sunSign: string | number) => {
+    const signs: { [key: number]: string } = {
       1: "Aries",
       2: "Taurus",
       3: "Gemini",
@@ -36,10 +36,10 @@ const HoroscopePage = () => {
       11: "Aquarius",
       12: "Pisces"
     };
-    return signs[sunSign] || "Unknown";
+    return signs[Number(sunSign)] || "Unknown";
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -65,6 +65,7 @@ const HoroscopePage = () => {
         const sunSign = data.output[0][1].current_sign;
         setResult(getZodiacSign(sunSign));
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       setError('Failed to fetch horoscope data. Please try again.');
     } finally {
@@ -72,7 +73,7 @@ const HoroscopePage = () => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: string; value: string; }; }) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value

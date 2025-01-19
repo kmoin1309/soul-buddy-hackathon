@@ -15,7 +15,7 @@ const festivals = {
 };
 
 export default function RitualSelector() {
-  const [selectedFestival, setSelectedFestival] = useState(null);
+  const [selectedFestival, setSelectedFestival] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-black text-white p-8">
