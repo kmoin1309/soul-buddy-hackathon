@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Ritua - Yoga Pose Detection</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+        
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            color: #E6C696;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .main-container {
+            display: flex;
+            width: 90%;
+            max-width: 1400px;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .video-section {
+            flex: 1;
+            background: linear-gradient(to right, rgba(230, 198, 150, 0.1), rgba(230, 198, 150, 0.05));
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid rgba(230, 198, 150, 0.2);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 15px;
+        }
+
+        .poses-section {
+            width: 300px;
+        }
+
+        .poses-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #E6C696;
+            text-align: center;
+        }
+
+        .scroll-container {
+            background: linear-gradient(to bottom, rgba(230, 198, 150, 0.1), rgba(230, 198, 150, 0.05));
+            border: 1px solid rgba(230, 198, 150, 0.2);
+            border-radius: 15px;
+            overflow-y: auto;
+            max-height: 70vh;
+            padding: 20px;
+        }
+
+        .pose-card {
+            background: rgba(230, 198, 150, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .pose-card:hover {
+            transform: scale(1.02);
+        }
+
+        .pose-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .pose-name {
+            text-align: center;
+            color: #E6C696;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        /* Scrollbar styling */
+        .scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scroll-container::-webkit-scrollbar-track {
+            background: rgba(230, 198, 150, 0.1);
+            border-radius: 4px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #E6C696;
+            border-radius: 4px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #c9a97d;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="video-section">
+            <div class="video-container">
+                <img src="{{ url_for('video_feed1') }}" alt="Pose Detection">
+            </div>
+        </div>
+        
+        <div class="poses-section">
+            <h2 class="poses-title">SELECT RITUA</h2>
+            <div class="scroll-container">
+                <div class="pose-card">
+                    <img src="static/img/Warrior II pose.png" alt="Warrior II Pose">
+                    <div class="pose-name">Warrior II Pose</div>
+                </div>
+                <div class="pose-card">
+                    <img src="static/img/Tree pose.png" alt="Tree Pose">
+                    <div class="pose-name">Tree Pose</div>
+                </div>
+                <div class="pose-card">
+                    <img src="static/img/T pose.png" alt="T Pose">
+                    <div class="pose-name">T Pose</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

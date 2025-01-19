@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yoga Asanas</title>
+    <link rel="stylesheet" type="text/css" href="static/yoga-style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            color: #E6C696;
+            font-family: 'Playfair Display', serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(230, 198, 150, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(230, 198, 150, 0.2);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card .content {
+            position: relative;
+        }
+
+        .card .front,
+        .card .back {
+            transition: transform 0.6s ease;
+            backface-visibility: hidden;
+        }
+
+        .card .front {
+            transform: rotateY(0deg);
+        }
+
+        .card .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotateY(180deg);
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card input.more:checked ~ .content .front {
+            transform: rotateY(180deg);
+        }
+
+        .card input.more:checked ~ .content .back {
+            transform: rotateY(0deg);
+        }
+
+        .card .front .inner,
+        .card .back .inner {
+            padding: 20px;
+        }
+
+        .card .front .inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .card .front {
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .card .description {
+            font-size: 1em;
+            color: #E6C696;
+        }
+
+        .try-it-out {
+            margin-top: 20px;
+        }
+
+        .try-it-out button {
+            background-color: #E6C696;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .try-it-out button:hover {
+            background-color: #c9a97d;
+        }
+    </style>
+</head>
+<body>
+    <h1>YOGA ASANAS</h1>
+    <div class="wrapper">
+        <!-- First row of 3 cards -->
+        <div class="row">
+            <div class="card">
+                <input type="checkbox" id="card1" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('static/img/Trikonasana.jpg');">
+                        <div class="inner">
+                            <h2>Trikonasana</h2>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>It helps in reducing excess body weight, strengthens legs and arms, and improves digestion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <input type="checkbox" id="card2" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('static/img/Virabadrasana.png');">
+                        <div class="inner">
+                            <h2>Virabadrasana</h2>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>It strengthens legs, improves balance, enhances focus, and instills determination.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <input type="checkbox" id="card3" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('static/img/Vrikshasana.png');">
+                        <div class="inner">
+                            <h2>Vrikshasana</h2>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>It improves the strength of your back and legs and enhances balance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second row of 3 cards -->
+        <div class="row">
+            <div class="card">
+                <input type="checkbox" id="card4" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('static/img/Bhujangasana.png');">
+                        <div class="inner">
+                            <h2>Bhujangasana</h2>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>It improves blood circulation and strengthens the lower back and arm muscles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <input type="checkbox" id="card5" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('static/img/Sukhasana.png');">
+                        <div class="inner">
+                            <h2>Sukhasana</h2>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>It calms the mind, enhances peace, and improves body posture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <input type="checkbox" id="card6" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('static/img/Chakrasana.png');">
+                        <div class="inner">
+                            <h2>Chakrasana</h2>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>It cures back and kidney pain and stimulates the thyroid and pituitary glands.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third row of 2 cards -->
+        <div class="row">
+            <div class="card">
+                <input type="checkbox" id="card7" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('static/img/Balasana.png');">
+                        <div class="inner">
+                            <h2>Balasana</h2>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>This pose is mentally, physically, and emotionally relaxing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <input type="checkbox" id="card8" class="more" aria-hidden="true">
+                <div class="content">
+                    <div class="front" style="background-image: url('static/img/Shavasana.png');">
+                        <div class="inner">
+                            <h2>Shavasana</h2>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <div class="description">
+                                <p>It relaxes the entire body, improves memory, and increases concentration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="try-it-out">
+        <a href="{{ url_for('yoga_try') }}">
+            <button>TRY IT OUT</button>
+        </a>
+    </div>
+</body>
+</html>
