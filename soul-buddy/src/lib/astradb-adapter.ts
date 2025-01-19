@@ -25,7 +25,7 @@ export function connectToDatabase(): Db {
   // Get the database specified by your endpoint.
   const database = client.db(endpoint);
 
-  console.log(Connected to database ${database.id});
+  console.log(`Connected to database ${database.id}`);
 
   return database;
 }
