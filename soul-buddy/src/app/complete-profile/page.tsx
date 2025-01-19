@@ -1,4 +1,4 @@
-import UserForm from "@/components/user-form";
+import UserForm from "@/components/UserForm";
 
 export default function CompleteProfilePage() {
   return (
