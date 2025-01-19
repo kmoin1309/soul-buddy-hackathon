@@ -6,15 +6,29 @@ import bg from "../../public/logos/bg_gif_2.gif";
 import Link from "next/link";
 import Hand from "@/components/hand";
 import Reviews from "@/components/reviews";
-import rashi from "../../public/services/rashi.png"
-import ritual from "../../public/services/ritual.png"
-import gem from "../../public/services/gem.png"
-import meditate from "../../public/services/meditate.png"
-import yoga from "../../public/services/yoga.png"
-import horoscope from "../../public/services/horoscope.png"
-import read from "../../public/services/read.png"
-import advice from "../../public/services/advice.png"
+import rashi from "../../public/services/rashi.png";
+import ritual from "../../public/services/ritual.png";
+import gem from "../../public/services/gem.png";
+import meditate from "../../public/services/meditate.png";
+import yoga from "../../public/services/yoga.png";
+import horoscope from "../../public/services/horoscope.png";
+import read from "../../public/services/read.png";
+import advice from "../../public/services/advice.png";
+import { useRouter } from "next/navigation"; // Correct import for useRouter
+
 export default function Home() {
+  const router = useRouter();
+
+  // Define the services array
+  const services = [
+    { service: "Yoga & Wellness", path: "http://127.0.0.1:5000", icon: <Image src={yoga} alt="yoga" className="w-22" /> },
+    { service: "Spiritual Rituals", path: "/ritual-guide", icon: <Image src={ritual} alt="ritual" className="w-22" /> },
+    { service: "Personalized Guidance", path: "/advice", icon: <Image src={advice} alt="advice" className="w-24" /> },
+    { service: "Palmistry Insights", path: "/palm-reading", icon: <Image src={read} alt="read" className="w-22" /> },
+    { service: "Astrological Insights", path: "/horoscopes", icon: <Image src={horoscope} alt="horoscope" className="w-22" /> },
+    { service: "Meditation & Mindfulness", path: "/meditate", icon: <Image src={meditate} alt="meditate" className="w-22" /> },
+  ];
+
   return (
     <div className="min-h-screen bg-black text-lightwhite">
       {/* Navbar */}
@@ -23,7 +37,10 @@ export default function Home() {
           <h1 className="font-bold font-soria text-goldnew text-4xl">
             Soul Buddy
           </h1>
-          <Button className="font-sans bg-goldnew w-24 font-semibold text-black hover:bg-orange-300 transition-colors">
+          <Button
+            className="bg-goldnew text-black font-semibold hover:bg-orange-300 transition-all duration-300 px-6 py-2"
+            onClick={() => router.push("/userform")} // Redirect to UserForm page
+          >
             Login
           </Button>
         </div>
@@ -45,7 +62,10 @@ export default function Home() {
           <p className="text-lg md:text-xl mb-8">
             Embark on a journey of self-discovery and unlock the secrets of the universe. Let the stars guide your way to enlightenment and inner peace.
           </p>
-          <Button className="rounded-full bg-goldnew text-black font-semibold font-sans px-8 py-3 text-lg hover:bg-orange-300 transition-colors">
+          <Button
+            className="rounded-full bg-goldnew text-black font-semibold font-sans px-8 py-3 text-lg hover:bg-orange-300 transition-colors"
+            onClick={() => router.push("/userform")}
+          >
             Get Started
           </Button>
         </div>
@@ -58,17 +78,20 @@ export default function Home() {
             Services We Offer
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-            {[
-              // { service: "Find Your Zodiac ", path: "/rashi", icon: <Image src={rashi} alt="rashi" className="w-22"/> },
-              // { service: "Gemstone Recommendations", path: "/gemstone", icon: <Image src={gem} alt="gem" className="w-22"/> },
-              { service: "Spiritual Rituals", path: "/ritual-guide", icon:  <Image src={ritual} alt="ritual" className="w-22"/> },
-              { service: "Yoga & Wellness", path: "/yoga", icon:  <Image src={yoga} alt="yoga" className="w-22"/>},
-              { service: "Personalized Guidance", path: "/advice", icon: <Image src={advice} alt="yoga" className="w-24"/> },
-              { service: "Palmistry Insights", path: "/palm-reading", icon: <Image src={read} alt="yoga" className="w-22"/> },
-              { service: "Astrological Insights", path: "/horoscopes", icon: <Image src={horoscope} alt="yoga" className="w-22"/>},
-              { service: "Meditation & Mindfulness", path: "/meditate", icon:  <Image src={meditate} alt="gem" className="w-22"/> },
-            ].map(({ service, path, icon }, index) => (
-              <Link key={index} href={path} className="group">
+            {services.map(({ service, path, icon }, index) => (
+              <div
+                key={index}
+                className="group cursor-pointer"
+                onClick={() => {
+                  if (path.startsWith("http")) {
+                    // Redirect to external URL
+                    window.location.href = path;
+                  } else {
+                    // Use Next.js router for internal routes
+                    router.push(path);
+                  }
+                }}
+              >
                 <div className="flex flex-col items-center space-y-4 transition-transform transform hover:scale-105">
                   <div className="w-24 h-24 md:w-32 md:h-32 bg-transparent rounded-full flex justify-center items-center text-4xl md:text-5xl shadow-lg group-hover:shadow-xl transition-shadow">
                     {icon}
@@ -77,7 +100,7 @@ export default function Home() {
                     {service}
                   </p>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -88,4 +111,3 @@ export default function Home() {
     </div>
   );
 }
-
