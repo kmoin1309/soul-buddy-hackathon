@@ -57,10 +57,10 @@ export default function Home() {
           <h2 className="font-soria text-goldnew text-5xl md:text-6xl text-center mb-16">
             Services We Offer
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
             {[
-              { service: "Find Your Zodiac ", path: "/rashi", icon: <Image src={rashi} alt="rashi" className="w-22"/> },
-              { service: "Gemstone Recommendations", path: "/gemstone", icon: <Image src={gem} alt="gem" className="w-22"/> },
+              // { service: "Find Your Zodiac ", path: "/rashi", icon: <Image src={rashi} alt="rashi" className="w-22"/> },
+              // { service: "Gemstone Recommendations", path: "/gemstone", icon: <Image src={gem} alt="gem" className="w-22"/> },
               { service: "Spiritual Rituals", path: "/ritual-guide", icon:  <Image src={ritual} alt="ritual" className="w-22"/> },
               { service: "Yoga & Wellness", path: "/yoga", icon:  <Image src={yoga} alt="yoga" className="w-22"/>},
               { service: "Personalized Guidance", path: "/advice", icon: <Image src={advice} alt="yoga" className="w-24"/> },

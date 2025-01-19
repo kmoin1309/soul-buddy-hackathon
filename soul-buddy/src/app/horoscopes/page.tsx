@@ -40,7 +40,7 @@ export default function HoroscopePage() {
         method: "GET",
         url: `https://horoscopes-ai.p.rapidapi.com/get_horoscope_en/${selectedSign}/${selectedPeriod}/general`,
         headers: {
-          "x-rapidapi-key": "889364dff1msh823899e415311fdp15674fjsn6fd190d8ce99",
+          "x-rapidapi-key": "4fa1e848b7mshd8a09d33bdddfdfp18bbe1jsnc2112d79ed18",
           "x-rapidapi-host": "horoscopes-ai.p.rapidapi.com",
         },
       }
