@@ -1,109 +1,115 @@
-# Soul Buddy - Your Guide to Well-being
+# Soul Buddy - Your Guide to Well-being 🌟
 
-Welcome to **Soul Buddy**, your personal guide to well-being! Our platform blends ancient wisdom with modern technology to help you lead a balanced and fulfilling life. Whether you're looking for astrological insights, yoga guidance, spiritual rituals, or meditation practices, Soul Buddy is here to support your journey toward emotional, physical, and spiritual well-being.
-
----
-
-## 🌟 Features
-
-### 1️⃣ **Personalized Horoscope & Astrological Insights**
-- **What it offers**: Get daily and monthly horoscopes tailored to your birth details.
-- **Why it matters**: Navigate life’s challenges with confidence using personalized astrological predictions.
-- **Visual**: A user enters their birth details, and a personalized horoscope appears.
+This repository contains the **Soul Buddy** project, created as part of our initiative to combine ancient spiritual wisdom with cutting-edge AI technologies. The project demonstrates the integration of astrology, yoga, spiritual rituals, and meditation into an AI-powered platform, enabling users to achieve emotional, physical, and spiritual harmony.
 
 ---
 
-### 2️⃣ **Yoga & Wellness (AI-Powered Tracking)**
-- **What it offers**: Follow expert-recommended yoga movements with real-time posture tracking using OpenCV.
-- **Why it matters**: Enhance your physical well-being with AI-powered guidance and progress tracking.
-- **Visual**: A user follows on-screen yoga movements while OpenCV tracks their posture.
+## Overview
+
+**Soul Buddy** focuses on enhancing well-being by providing personalized horoscopes, AI-powered yoga tracking, guided meditations, and cultural ritual guidance. The platform leverages AI tools to deliver meaningful insights, helping users embark on a holistic journey of self-improvement.
 
 ---
 
-### 3️⃣ **Spiritual Rituals for Festive Celebrations**
-- **What it offers**: Learn and engage in meaningful rituals from various cultural festivals.
-- **Why it matters**: Stay connected to your roots and celebrate traditions with purpose.
-- **Visual**: Beautiful visuals of different cultural festivals and rituals.
+## Key Features
+
+- **Personalized Horoscope**: Generate daily and monthly astrological insights based on user birth details.
+- **AI-Powered Yoga Tracker**: Analyze and provide feedback on yoga poses using OpenCV and Mediapipe.
+- **Spiritual Rituals**: Guidance for meaningful rituals during cultural and festive events.
+- **Meditation Practices**: Guided meditation sessions with soothing sounds and mindfulness exercises.
+- **Tailored Wellness Insights**: Personalized feedback and progress tracking for holistic development.
 
 ---
 
-### 4️⃣ **Personalized Guidance & Feedback**
-- **What it offers**: Receive tailored well-being reports and actionable steps based on your self-assessment.
-- **Why it matters**: Improve your emotional and spiritual well-being with expert-driven insights.
-- **Visual**: A user fills out a self-assessment form and receives a personalized well-being report.
+## Tech Stack
+
+- **LangFlow**: AI workflow design and deployment.
+- **OpenCV & Mediapipe**: Real-time posture tracking for yoga guidance.
+- **Gemini AI**: Advanced insights and recommendations.
+- **Astra DB**: Scalable database for storing user and progress data.
+- **Next.js**: Fast and modern framework for building the web interface.
+- **Tailwind CSS**: Styling the UI for a clean and user-friendly design.
 
 ---
 
-### 5️⃣ **Meditation for Inner Peace**
-- **What it offers**: Guided meditation sessions with calming sounds and mindfulness exercises.
-- **Why it matters**: Reduce stress, enhance focus, and bring tranquility into your life.
-- **Visual**: A serene environment with a user meditating while the app plays calming sounds.
+## Project Workflow
+
+1. **Personalization**:
+   - Users provide birth details to generate custom horoscope insights.
+   - AI algorithms analyze inputs for tailored recommendations.
+
+2. **AI Yoga Tracking**:
+   - Real-time pose estimation using OpenCV and Mediapipe.
+   - Feedback provided to users for improved posture and wellness.
+
+3. **Meditation and Ritual Guidance**:
+   - Guided sessions delivered via audio and visuals.
+   - Cultural rituals are explained with step-by-step instructions.
 
 ---
 
-## 🎥 Watch the Demo
-[Opening Scene: A Calm, Soothing Background with Soft Music]
+## Installation and Setup
 
-**Narrator**: "Welcome to Soul Buddy, your personal guide to well-being! Our platform blends ancient wisdom with modern technology to help you lead a balanced and fulfilling life."
+### Prerequisites
 
-[Closing Scene: Smiling Users Engaging with the App]
+- Node.js
+- Astra DB account
+- Python (for backend AI components)
+- LangFlow environment
 
-**Narrator**: "Join Soul Buddy today and embrace a journey of self-discovery, wellness, and spiritual balance. Your well-being starts here!"
+### Steps
 
----
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kmoin1309/SoulBuddy.git
+   cd SoulBuddy
 
-## 🚀 How to Get Started
-1. **Download the App**: Available on [App Store](#) and [Google Play](#).
-2. **Sign Up**: Create your account and enter your birth details for personalized insights.
-3. **Explore Features**: Dive into horoscopes, yoga, rituals, and meditation.
-4. **Track Progress**: Use AI-powered tools to monitor your well-being journey.
+	2.	Install dependencies for the SoulBuddy:
 
----
+cd frontend
+npm install
 
-## 📲 Stay Connected
-- **Website**: [www.soulbuddy.com](#)
-- **Social Media**: Follow us on [Instagram](#), [Facebook](#), and [Twitter](#) for updates and tips.
-- **Support**: Contact us at [support@soulbuddy.com](#) for any questions or feedback.
 
----
+	3.	Set up the backend:
+	•	Navigate to the backend/ directory.
+	•	Install Python dependencies:
 
-## 🌈 Why Choose Soul Buddy?
-- **Holistic Approach**: Combines ancient wisdom with modern technology.
-- **Personalized Experience**: Tailored insights and guidance for every user.
-- **AI-Powered Tools**: Real-time tracking and feedback for yoga and wellness.
-- **Cultural Connection**: Stay connected to your roots with spiritual rituals.
+pip install -r requirements.txt
 
----
 
-## 🙏 Join Us Today!
-Embrace a journey of self-discovery, wellness, and spiritual balance with **Soul Buddy**. Your well-being starts here!
+	4.	Configure environment variables:
+	•	Create a .env file in both frontend/ and backend/ directories.
+	•	Add keys for Astra DB, LangFlow API, and other required services.
+	5.	Start the development servers:
+	•	Frontend:
 
-📲 **Download Now** and stay connected to your inner self!
+npm run dev
 
----
 
-## 🛠️ Technologies Used
-- **Frontend**: React, Next.js, Tailwind CSS
-- **Backend**: Node.js, Langflow, Python, Flask
-- **AI/ML**: OpenCV for posture tracking, Mediapipe, Gemini
-- **Database**: AstraDB
-- **Deployment**: Vercel, AWS
+	•	Backend:
 
----
+python app.py
 
-## 📜 License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Usage
+	•	Visit the website to explore features like horoscopes, yoga tracking, and guided meditations.
+	•	Interact with personalized insights to improve your well-being.
 
----
+Future Enhancements
+	•	Add multilingual support for global accessibility.
+	•	Expand AI capabilities for more precise yoga feedback.
+	•	Integrate additional cultural rituals and meditation practices.
 
-## 🤝 Contributing
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started.
+Contributors
+- **Moinuddin Quazi** ([@kmoin1309](https://github.com/kmoin1309))  
+- **Sujit Mishrae** ([@suzzit6](https://github.com/Suzzit6))  
+- **Aries Dmello** ([@dmelloaries](https://github.com/dmelloaries))
+- **Agneya Pathre** ([@agneya-1402](https://github.com/agneya-1402)) 
 
----
+Meet the Soul Buddy team.
 
-## 📧 Contact
-For inquiries, collaborations, or feedback, reach out to us at [hello@soulbuddy.com](#).
+License
 
----
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-**Soul Buddy** - Your journey to well-being begins here! 🌟
+Acknowledgments
+	•	Open-source contributors for LangFlow, Mediapipe, and Astra DB.
+	•	Support from hackathon mentors and organizers.
